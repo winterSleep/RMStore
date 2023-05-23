@@ -388,6 +388,10 @@ typedef void (^RMStoreSuccessBlock)();
     }
 }
 
+- (BOOL)paymentQueue:(SKPaymentQueue *)queue shouldAddStorePayment:(SKPayment *)payment forProduct:(SKProduct *)product{
+    return true;
+}
+
 - (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
 {
     RMStoreLog(@"restore transactions finished");
